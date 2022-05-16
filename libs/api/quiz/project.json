@@ -1,0 +1,23 @@
+{
+  "root": "libs/api/quiz",
+  "sourceRoot": "libs/api/quiz/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/quiz/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/quiz"],
+      "options": {
+        "jestConfig": "libs/api/quiz/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:presentation"]
+}

@@ -1,0 +1,24 @@
+{
+  "root": "libs/api/shared/infrastructure/transactional",
+  "sourceRoot": "libs/api/shared/infrastructure/transactional/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/api/shared/infrastructure/transactional/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/shared/infrastructure/transactional"],
+      "options": {
+        "jestConfig": "libs/api/shared/infrastructure/transactional/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:infrastructure"]
+}

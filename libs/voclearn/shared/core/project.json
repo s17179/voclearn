@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/voclearn/shared/core",
+  "sourceRoot": "libs/voclearn/shared/core/src",
+  "prefix": "voclearn",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/voclearn/shared/core"],
+      "options": {
+        "jestConfig": "libs/voclearn/shared/core/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/voclearn/shared/core/**/*.ts",
+          "libs/voclearn/shared/core/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:voclearn"]
+}

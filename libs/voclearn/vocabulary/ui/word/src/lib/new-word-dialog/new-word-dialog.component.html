@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Dodaj nowe słówko</h2>
+
+<form [formGroup]="form">
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+      <mat-label>Słówko</mat-label>
+      <input type="text" formControlName="word" matInput required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tłumaczenie</mat-label>
+      <input type="text" formControlName="translation" matInput required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Skojarzenie</mat-label>
+      <textarea
+        formControlName="associationNote"
+        matInput
+        required
+        rows="6"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Grupa słówek</mat-label>
+      <mat-select formControlName="wordGroup" required>
+        <mat-option *ngFor="let wordGroup of wordGroups" [value]="wordGroup">{{
+          wordGroup.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button
+      mat-stroked-button
+      color="primary"
+      [mat-dialog-close]="form"
+      [disabled]="!form.valid"
+    >
+      Dodaj
+    </button>
+  </mat-dialog-actions>
+</form>

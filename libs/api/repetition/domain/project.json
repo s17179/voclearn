@@ -1,0 +1,23 @@
+{
+  "root": "libs/api/repetition/domain",
+  "sourceRoot": "libs/api/repetition/domain/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/repetition/domain/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/repetition/domain"],
+      "options": {
+        "jestConfig": "libs/api/repetition/domain/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:domain"]
+}

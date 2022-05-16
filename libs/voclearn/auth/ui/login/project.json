@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/voclearn/auth/ui/login",
+  "sourceRoot": "libs/voclearn/auth/ui/login/src",
+  "prefix": "voclearn",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/voclearn/auth/ui/login"],
+      "options": {
+        "jestConfig": "libs/voclearn/auth/ui/login/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/voclearn/auth/ui/login/**/*.ts",
+          "libs/voclearn/auth/ui/login/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:voclearn"]
+}

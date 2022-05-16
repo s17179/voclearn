@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  width: 70%;
+  margin-top: 100px;
+  padding: 30px;
+}
+
+mat-card-content {
+  margin-top: 20px;
+}
+
+mat-card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+}

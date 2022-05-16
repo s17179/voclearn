@@ -1,0 +1,29 @@
+{
+  "root": "apps/voclearn-e2e",
+  "sourceRoot": "apps/voclearn-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/voclearn-e2e/cypress.json",
+        "devServerTarget": "voclearn:serve:development",
+        "tsConfig": "apps/voclearn-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "voclearn:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/voclearn-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["voclearn"]
+}

@@ -1,0 +1,23 @@
+{
+  "root": "libs/api/shared/infrastructure/database",
+  "sourceRoot": "libs/api/shared/infrastructure/database/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/shared/infrastructure/database/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/shared/infrastructure/database"],
+      "options": {
+        "jestConfig": "libs/api/shared/infrastructure/database/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:infrastructure"]
+}

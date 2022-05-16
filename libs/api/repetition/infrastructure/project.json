@@ -1,0 +1,22 @@
+{
+  "root": "libs/api/repetition/infrastructure",
+  "sourceRoot": "libs/api/repetition/infrastructure/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/repetition/infrastructure/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/repetition/infrastructure"],
+      "options": {
+        "jestConfig": "libs/api/repetition/infrastructure/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:infrastructure"]
+}

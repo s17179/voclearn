@@ -1,0 +1,26 @@
+{
+  "root": "libs/api/shared/infrastructure/domain-event-publisher",
+  "sourceRoot": "libs/api/shared/infrastructure/domain-event-publisher/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/api/shared/infrastructure/domain-event-publisher/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/api/shared/infrastructure/domain-event-publisher"
+      ],
+      "options": {
+        "jestConfig": "libs/api/shared/infrastructure/domain-event-publisher/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:infrastructure"]
+}

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span>Voclearn</span>
+
+  <ng-container *ngIf="isAuthorized">
+    <a mat-button [routerLink]="'/vocabulary/words'">
+      <mat-icon>translate</mat-icon>
+      Słówka
+    </a>
+    <a mat-button [routerLink]="'/vocabulary/word-groups'">
+      <mat-icon>inventory</mat-icon>
+      Grupy słówek
+    </a>
+    <a mat-button [routerLink]="'/vocabulary/quiz'">
+      <mat-icon>quiz</mat-icon>
+      Quiz
+    </a>
+
+    <span class="example-spacer"></span>
+
+    <button mat-button (click)="onLogoutButtonClicked()">
+      <mat-icon>logout</mat-icon>
+      Wyloguj się
+    </button>
+  </ng-container>
+</mat-toolbar>

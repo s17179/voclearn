@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/voclearn/vocabulary/shell",
+  "sourceRoot": "libs/voclearn/vocabulary/shell/src",
+  "prefix": "voclearn",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/voclearn/vocabulary/shell"],
+      "options": {
+        "jestConfig": "libs/voclearn/vocabulary/shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/voclearn/vocabulary/shell/**/*.ts",
+          "libs/voclearn/vocabulary/shell/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:voclearn"]
+}

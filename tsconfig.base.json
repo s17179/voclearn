@@ -1,0 +1,96 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "strict": true,
+    "exactOptionalPropertyTypes": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@voclearn/api-repetition-application": [
+        "libs/api/repetition/application/src/index.ts"
+      ],
+      "@voclearn/api-repetition-domain": [
+        "libs/api/repetition/domain/src/index.ts"
+      ],
+      "@voclearn/api-repetition-infrastructure": [
+        "libs/api/repetition/infrastructure/src/index.ts"
+      ],
+      "@voclearn/api-repetition-shell": [
+        "libs/api/repetition/shell/src/index.ts"
+      ],
+      "@voclearn/api/auth": ["libs/api/auth/src/index.ts"],
+      "@voclearn/api/quiz": ["libs/api/quiz/src/index.ts"],
+      "@voclearn/api/shared/application": [
+        "libs/api/shared/application/src/index.ts"
+      ],
+      "@voclearn/api/shared/domain": ["libs/api/shared/domain/src/index.ts"],
+      "@voclearn/api/shared/infrastructure/config": [
+        "libs/api/shared/infrastructure/config/src/index.ts"
+      ],
+      "@voclearn/api/shared/infrastructure/database": [
+        "libs/api/shared/infrastructure/database/src/index.ts"
+      ],
+      "@voclearn/api/shared/infrastructure/domain-event-publisher": [
+        "libs/api/shared/infrastructure/domain-event-publisher/src/index.ts"
+      ],
+      "@voclearn/api/shared/infrastructure/firebase": [
+        "libs/api/shared/infrastructure/firebase/src/index.ts"
+      ],
+      "@voclearn/api/shared/infrastructure/jwt": [
+        "libs/api/shared/infrastructure/jwt/src/index.ts"
+      ],
+      "@voclearn/api/shared/infrastructure/transactional": [
+        "libs/api/shared/infrastructure/transactional/src/index.ts"
+      ],
+      "@voclearn/api/vocabulary": ["libs/api/vocabulary/src/index.ts"],
+      "@voclearn/contracts": ["libs/contracts/src/index.ts"],
+      "@voclearn/voclearn/auth/api": ["libs/voclearn/auth/api/src/index.ts"],
+      "@voclearn/voclearn/auth/shell": [
+        "libs/voclearn/auth/shell/src/index.ts"
+      ],
+      "@voclearn/voclearn/auth/ui/login": [
+        "libs/voclearn/auth/ui/login/src/index.ts"
+      ],
+      "@voclearn/voclearn/auth/ui/register": [
+        "libs/voclearn/auth/ui/register/src/index.ts"
+      ],
+      "@voclearn/voclearn/header": ["libs/voclearn/header/src/index.ts"],
+      "@voclearn/voclearn/shared/core": [
+        "libs/voclearn/shared/core/src/index.ts"
+      ],
+      "@voclearn/voclearn/vocabulary/api": [
+        "libs/voclearn/vocabulary/api/src/index.ts"
+      ],
+      "@voclearn/voclearn/vocabulary/shell": [
+        "libs/voclearn/vocabulary/shell/src/index.ts"
+      ],
+      "@voclearn/voclearn/vocabulary/ui/association-dialog": [
+        "libs/voclearn/vocabulary/ui/association-dialog/src/index.ts"
+      ],
+      "@voclearn/voclearn/vocabulary/ui/quiz": [
+        "libs/voclearn/vocabulary/ui/quiz/src/index.ts"
+      ],
+      "@voclearn/voclearn/vocabulary/ui/word": [
+        "libs/voclearn/vocabulary/ui/word/src/index.ts"
+      ],
+      "@voclearn/voclearn/vocabulary/ui/word-group": [
+        "libs/voclearn/vocabulary/ui/word-group/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

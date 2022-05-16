@@ -1,0 +1,76 @@
+<section>
+  <mat-card>
+    <mat-card-title>Quiz</mat-card-title>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-content style="text-align: center" *ngIf="!!question">
+      <p>Podaj tłumaczenie słowa:</p>
+      <h1>{{ question?.question }}</h1>
+
+      <mat-divider></mat-divider>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="state.form">
+        <mat-form-field appearance="fill">
+          <mat-label>Tłumaczenie</mat-label>
+          <input type="text" formControlName="answer" matInput required />
+        </mat-form-field>
+
+        <div style="display: flex; justify-content: space-between">
+          <button
+            type="button"
+            mat-raised-button
+            color="primary"
+            (click)="onShowAssociationButtonClicked()"
+          >
+            Zobacz skojarzenie
+            <mat-icon>lightbulb</mat-icon>
+          </button>
+
+          <button mat-stroked-button color="primary" [disabled]="!form.valid">
+            Odpowiedz
+            <mat-icon>question_answer</mat-icon>
+          </button>
+        </div>
+      </form>
+
+      <div
+        class="answer-result"
+        style="color: green"
+        *ngIf="state.correctAnswerResult"
+      >
+        <mat-icon class="answer-result-icon">verified</mat-icon>
+        <p>Prawidłowa odpowiedź!</p>
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="onNextQuestionButtonClicked()"
+        >
+          Następne słowo
+          <mat-icon>east</mat-icon>
+        </button>
+      </div>
+
+      <div
+        class="answer-result"
+        style="color: red"
+        *ngIf="state.wrongAnswerResult"
+      >
+        <mat-icon class="answer-result-icon">dangerous</mat-icon>
+        <p>Błędna odpowiedź!</p>
+        <p style="color: #333">Poprawna odpowiedź to:</p>
+        <p style="color: green">
+          <strong>{{ correctAnswer }}</strong>
+        </p>
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="onNextQuestionButtonClicked()"
+        >
+          Następne słowo
+          <mat-icon>east</mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>
